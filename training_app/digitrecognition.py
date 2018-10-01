@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 from keras.datasets import mnist
 from keras.callbacks import ModelCheckpoint, Callback, EarlyStopping
 from keras.utils import np_utils
@@ -8,11 +9,17 @@ from cs231nmodel import CS231NModel
 import config
 
 
+def preprocessing(train: np.ndarray):
+    return train.astype(np.float32) / 255
+
+
 def main(config):
     # data loading & preprocessing
     (X_train_orig, Y_train_orig), (X_test_orig, Y_test_orig) = mnist.load_data()
     X_train = X_train_orig.reshape((-1, 28, 28, 1))
+    X_train = preprocessing(X_train)
     X_test = X_test_orig.reshape((-1, 28, 28, 1))
+    X_test = preprocessing(X_test)
     Y_train = np_utils.to_categorical(Y_train_orig)
     Y_test = np_utils.to_categorical(Y_test_orig)
 

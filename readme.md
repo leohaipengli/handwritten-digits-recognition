@@ -7,4 +7,21 @@ Also implemented a GUI app to allow users to draw their own digit to test the mo
 
 ## Training App
 
+### requirements
+
+numpy
+tensorflow
+keras
+opencv
+
+### run training
+
+1. Edit the config in `training_app/config.py` if necessary
+1. Run `digitrecognition.py`
+
+### result
+
+0.9862 accuracy in 3 epochs
+
 ## GUI Inference App
+
