@@ -8,7 +8,7 @@ class Config:
     SAVE_MODEL_FILENAME = 'CS231N-handwritten-digits.h5'
     
     # checkpoint
-    CHECKPOINT_FILEPATH = "ckpt/weights-improvement-{epoch:02d}-{val_loss:.2f}.hdf5"
+    CHECKPOINT_FILEPATH = "weights-improvement-{epoch:02d}-{val_loss:.2f}.hdf5"
 
     # training
     LOSS = 'categorical_crossentropy'

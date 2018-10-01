@@ -1,5 +1,4 @@
 import numpy as np
-import cv2
 from keras.datasets import mnist
 from keras.callbacks import ModelCheckpoint, Callback, EarlyStopping
 from keras.utils import np_utils

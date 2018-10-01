@@ -12,7 +12,6 @@ Also implemented a GUI app to allow users to draw their own digit to test the mo
 numpy
 tensorflow
 keras
-opencv
 
 ### run training
 
