@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Handwritten Digits</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'handwritten_digits/style.css' %}">
+</head>
+<body>
+    <!-- jumbotron -->
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8">  <!-- small only has 8 cols -->
+                    <h1>Handwritten Digits Recognition</h1>
+                    <p class="d-none d-sm-block">Recognize digits from 0 to 9 using trained neural network</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row row-content justify-content-center">
+        <div class="col-12 col-sm-8">
+            <div class="card">
+                <h3 class="card-header">{{ header }}</h3>
+                <div class="card-body">
+                    {% if draw %}
+                        <canvas id="drawing-board" width="280" height="280" ></canvas>
+                        <hr>
+                        <form action="{% url 'handwritten_digits:recognize' %}" method="post">
+                            {% csrf_token %}
+                            <input type="text" hidden id="dataURL" name="dataURL">
+                            <button type="submit" class="btn btn-primary">Recognize!</button>
+                            <button type="button" class="btn" id="clear" name="clear">Clear</button>
+                        </form>
+                    {% endif %}
+                    {% if result %}
+                        <p>You wrote:</p>
+                        <h3>{{ result }}</h3>
+                        <img src="{{ dataURL }}">
+                        <hr>
+                        <a class="btn btn-primary" href="{% url 'handwritten_digits:index' %}">Back</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+{#canvas here#}
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="{% static 'handwritten_digits/script.js' %}"></script>
+</body>
+</html>
