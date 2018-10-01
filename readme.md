@@ -9,9 +9,11 @@ Also implemented a GUI app to allow users to draw their own digit to test the mo
 
 ### requirements
 
+```
 numpy
 tensorflow
 keras
+```
 
 ### run training
 
@@ -29,11 +31,13 @@ Here is an simple GUI application implemented in Django, which allows you draw a
 
 ### requirements
 
+```
 numpy
 tensorflow
 keras
 pillow
 django
+```
 
 ### run inference app
 
