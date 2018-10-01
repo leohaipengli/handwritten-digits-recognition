@@ -50,9 +50,6 @@ def main(config):
         model.save(config.SAVE_MODEL_FILENAME)
         print("Model saved to file: {}".format(config.SAVE_MODEL_FILENAME))
 
-    score = model.evaluate(X_test, Y_test, verbose=1)
-    print("Score of test: {}".format(score))
-
 
 if __name__ == '__main__':
     main(config.Config)
