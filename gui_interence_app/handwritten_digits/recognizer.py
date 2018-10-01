@@ -50,4 +50,4 @@ class Recognizer:
 
 
 graph = tf.Graph()
-recognizer = Recognizer('handwritten_digits/static/handwritten_digits/CS231N-handwritten-digits.h5')
+recognizer = Recognizer('handwritten_digits/static/handwritten_digits/CNN-handwritten-digits.h5')

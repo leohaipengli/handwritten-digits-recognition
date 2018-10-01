@@ -5,7 +5,7 @@ class Config:
 
     # model save
     SAVE_MODEL = True
-    SAVE_MODEL_FILENAME = 'CS231N-handwritten-digits.h5'
+    SAVE_MODEL_FILENAME = 'CNN-handwritten-digits.h5'
     
     # checkpoint
     CHECKPOINT_FILEPATH = "weights-improvement-{epoch:02d}-{val_loss:.2f}.hdf5"

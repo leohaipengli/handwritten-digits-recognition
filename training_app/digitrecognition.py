@@ -4,7 +4,7 @@ from keras.callbacks import ModelCheckpoint, Callback, EarlyStopping
 from keras.utils import np_utils
 
 from testcallback import TestCallback
-from cs231nmodel import CS231NModel
+from cnnmodel import CNNModel
 import config
 
 
@@ -25,7 +25,7 @@ def main(config):
     print("X_train shape: {}".format(X_train.shape))
     print("Y_train shape: {}".format(Y_train.shape))
 
-    model = CS231NModel(input_shape=config.INPUT_SHAPE, output_class=config.OUTPUT_CLASS)
+    model = CNNModel(input_shape=config.INPUT_SHAPE, output_class=config.OUTPUT_CLASS)
 
     model.compile(loss=config.LOSS,
               optimizer=config.OPTIMIZER,

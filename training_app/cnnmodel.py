@@ -2,7 +2,7 @@ from keras.models import Model, Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense, Input
 
-def CS231NModel(input_shape: tuple, output_class: int):
+def CNNModel(input_shape: tuple, output_class: int):
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', input_shape=input_shape, name='conv_1'))
     model.add(Conv2D(64, (3, 3), activation='relu', name='conv_2'))
