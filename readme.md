@@ -24,6 +24,9 @@ keras
 
 ## GUI Inference App
 
+By utilizing trained model, we can predict given any images
+Here is an simple GUI application implemented in Django, which allows you draw a digit and run the prediction.
+
 ### requirements
 
 numpy
