@@ -24,3 +24,21 @@ keras
 
 ## GUI Inference App
 
+### requirements
+
+numpy
+tensorflow
+keras
+pillow
+django
+
+### run inference app
+
+1. cd to `gui_inference_app`
+2. make sure packages are installed correctly
+3. `python manage.py runserver`
+4. Open `http://127.0.0.1:8000` in your browser
+
+### Demo
+
+<img src="demos/5.gif" width="40%" height="40%"><img src="demos/4.gif" width="40%" height="40%"><img src="demos/8.gif" width="40%" height="40%"><img src="demos/0_wrong.gif" width="40%" height="40%">
